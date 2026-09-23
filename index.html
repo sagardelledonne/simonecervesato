@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Simone Cervesato · Personal Trainer a Milano Duomo</title>
+  <meta name="description" content="Simone Cervesato, personal trainer certificato ISSA Europe e istruttore di Street Lifting a Milano Duomo. Allenamenti 1:1, a domicilio, in coppia, online e preparazione gare.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Simone Cervesato · Personal Trainer a Milano Duomo">
+  <meta property="og:description" content="Forza, tecnica, metodo. Allenamenti su misura con un atleta che vive ciò che insegna.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Simone Cervesato · Personal Trainer",
+    "description": "Personal trainer a Milano: allenamenti 1:1, a domicilio, in coppia, online e preparazione gare di street lifting e panca piana.",
+    "telephone": "+393491375208",
+    "email": "simonecervesato@libero.it",
+    "areaServed": "Milano",
+    "address": { "@type": "PostalAddress", "addressLocality": "Milano", "addressRegion": "MI", "addressCountry": "IT" },
+    "vatID": "IT13195880961",
+    "sameAs": ["https://www.instagram.com/simonecervesato_pt/"],
+    "founder": { "@type": "Person", "name": "Simone Cervesato", "jobTitle": "Personal Trainer" }
+  }
+  </script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Simone Cervesato, torna su">
+      <img src="assets/img/logo-sc.png" alt="" class="brand-mark">
+      <img src="assets/img/logo-scritta.png" alt="Simone Cervesato" class="brand-word">
+    </a>
+    <nav class="nav-links" id="nav-links" aria-label="Sezioni">
+      <a href="#metodo">Metodo</a>
+      <a href="#chi-sono">Chi sono</a>
+      <a href="#risultati">Risultati</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#dove">Dove</a>
+      <a href="#domande">Domande</a>
+      <a href="#contatti" class="nav-links-cta">Prenota una consulenza</a>
+    </nav>
+    <a class="pill pill-sm nav-cta" href="#contatti">Prenota</a>
+    <button class="burger" id="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ STAGE: hero + panca esplosa ============ -->
+  <section class="stage" id="stage" aria-label="Il metodo, scomposto come una panca piana">
+    <span class="anchor" id="metodo" style="top:10%"></span>
+    <div class="stage-sticky">
+      <div class="stage-glow" aria-hidden="true"></div>
+      <canvas id="bench" aria-hidden="true"></canvas>
+      <div class="stage-fallback" aria-hidden="true">
+        <img src="assets/img/gara-panca-medaglia.webp" alt="">
+      </div>
+
+      <div class="hero-copy" data-layer="hero">
+        <p class="eyebrow">Personal Trainer · Milano Duomo</p>
+        <h1 class="display"><span class="chrome">Simone</span> <br><span class="chrome">Cervesato.</span></h1>
+        <p class="hero-lead">Forza, tecnica, metodo.<br class="br-sm"> Allenamenti su misura con un atleta che vive ciò che insegna.</p>
+        <div class="hero-ctas">
+          <a class="pill" href="#contatti">Prenota una consulenza</a>
+          <a class="link-more" href="#metodo">Scopri il metodo</a>
+        </div>
+      </div>
+
+      <div class="scroll-cue" data-layer="cue" aria-hidden="true">
+        <span>Scorri e scomponi la panca</span>
+        <i></i>
+      </div>
+
+      <div class="stage-title" data-layer="title">
+        <p class="eyebrow">Il metodo</p>
+        <h2 class="h2">Scomposto,<br><span class="chrome">pezzo per pezzo.</span></h2>
+        <p class="lead">Come una panca da gara: ogni pezzo ha un ruolo preciso.<br class="br-lg"> Se ne manca uno, il sistema non regge.</p>
+      </div>
+
+      <div class="chapters">
+        <article class="chapter" data-i="0">
+          <p class="chapter-kicker"><span>01</span> Il telaio</p>
+          <h3>Valutazione.</h3>
+          <p>Si parte dalle fondamenta: postura, mobilità, storia sportiva, obiettivi. Prima di aggiungere carico, capisco da dove partiamo.</p>
+        </article>
+        <article class="chapter" data-i="1">
+          <p class="chapter-kicker"><span>02</span> L’imbottitura</p>
+          <h3>Programma su misura.</h3>
+          <p>Nessuna scheda copiata. Un programma costruito su di te: sul tuo corpo, sul tuo tempo, sulla tua vita.</p>
+        </article>
+        <article class="chapter" data-i="2">
+          <p class="chapter-kicker"><span>03</span> Il bilanciere</p>
+          <h3>Tecnica.</h3>
+          <p>Ogni ripetizione, eseguita bene. La tecnica viene prima del peso: è quella che ti fa progredire senza farti male.</p>
+        </article>
+        <article class="chapter" data-i="3">
+          <p class="chapter-kicker"><span>04</span> I dischi</p>
+          <h3>Progressione.</h3>
+          <p>Carichi che crescono con te, settimana dopo settimana. Niente sensazioni: numeri, misurati e condivisi.</p>
+        </article>
+        <article class="chapter" data-i="4">
+          <p class="chapter-kicker"><span>05</span> Montanti e ganci</p>
+          <h3>Sicurezza.</h3>
+          <p>Ti seguo in ogni alzata. Allenarsi duro è possibile solo quando qualcuno ti tiene al sicuro.</p>
+        </article>
+        <article class="chapter" data-i="5">
+          <p class="chapter-kicker"><span>06</span> I bulloni</p>
+          <h3>I dettagli.</h3>
+          <p>Recupero, sonno, alimentazione, costanza. Piccoli come bulloni, ma sono loro a tenere insieme tutto.</p>
+        </article>
+      </div>
+
+      <div class="stage-outro" data-layer="outro">
+        <h2 class="h2">Tutto insieme.<br><span class="chrome">Il tuo percorso.</span></h2>
+        <a class="pill" href="#contatti">Inizia ora</a>
+      </div>
+
+      <div class="hotspot" id="hotspot" aria-hidden="true"><i></i><span></span></div>
+
+      <ol class="stage-rail" aria-hidden="true">
+        <li>Valutazione</li><li>Programma</li><li>Tecnica</li><li>Progressione</li><li>Sicurezza</li><li>Dettagli</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ MANIFESTO ============ -->
+  <section class="manifesto" id="manifesto" aria-label="Manifesto">
+    <div class="manifesto-sticky">
+      <p class="manifesto-text" id="manifesto-text">Non esistono scorciatoie. Esistono un metodo, la costanza e qualcuno che ti guida. Io ci metto la competenza e la passione di chi si allena ogni giorno. Tu ci metti la voglia. Il resto lo costruiamo insieme, una ripetizione alla volta.</p>
+    </div>
+  </section>
+
+  <!-- ============ CHI SONO ============ -->
+  <section class="about light" id="chi-sono">
+    <div class="wrap about-grid">
+      <div class="about-photos" data-reveal>
+        <figure class="ph ph-main" data-parallax="-0.06">
+          <img src="assets/img/sbd-bilanciere.webp" alt="Simone Cervesato con cintura e bilanciere prima di una gara" loading="lazy">
+        </figure>
+        <figure class="ph ph-small" data-parallax="0.08">
+          <img src="assets/img/stacco.webp" alt="Simone Cervesato durante uno stacco da terra" loading="lazy">
+        </figure>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow" data-reveal>Chi sono</p>
+        <h2 class="h2" data-reveal>Ciao,<br>sono Simone.</h2>
+        <p class="lead" data-reveal>Personal trainer certificato ISSA Europe, istruttore di Street Lifting e laureando in Scienze Motorie.</p>
+        <p data-reveal>Da più di tre anni seguo persone a Milano con un obiettivo semplice: farle allenare bene, con costanza, e vedere risultati che durano.</p>
+        <p data-reveal>Prima di essere un coach sono un atleta. Gareggio nella forza, e ogni programma che scrivo passa dalla stessa disciplina che applico su di me: studio, provo, misuro. Poi lo porto a te.</p>
+        <ul class="creds" data-reveal-group>
+          <li><strong>ISSA Europe</strong><span>Personal Trainer certificato</span></li>
+          <li><strong>Street Lifting</strong><span>Istruttore certificato</span></li>
+          <li><strong>Scienze Motorie</strong><span>Laureando, in tesi</span></li>
+          <li><strong>3+ anni</strong><span>con i clienti, a Milano</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RISULTATI ============ -->
+  <section class="results" id="risultati">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow" data-reveal>Risultati</p>
+        <h2 class="h2" data-reveal>Allena ciò<br><span class="chrome">che pratica.</span></h2>
+        <p class="lead" data-reveal>Quattro edizioni della Military Cup di street lifting, quattro podi. E un carico che cresce ogni anno: la stessa progressione che costruisco con chi si allena con me.</p>
+      </header>
+
+      <div class="results-grid">
+        <div class="chart card-dark" data-reveal id="chart">
+          <p class="chart-title">Military Cup · Street Lifting</p>
+          <div class="bars">
+            <div class="bar" style="--kg:93"><b class="kg" data-count="93">0</b><i class="col"></i><span class="medal bronze">3°</span><em>2023</em></div>
+            <div class="bar" style="--kg:113"><b class="kg" data-count="113">0</b><i class="col"></i><span class="medal silver">2°</span><em>2024</em></div>
+            <div class="bar" style="--kg:116"><b class="kg" data-count="116">0</b><i class="col"></i><span class="medal gold">1°</span><em>2025</em></div>
+            <div class="bar" style="--kg:124"><b class="kg" data-count="124">0</b><i class="col"></i><span class="medal gold">1°</span><em>2026</em></div>
+          </div>
+          <p class="chart-note">Carico in kg per edizione</p>
+        </div>
+        <div class="stats">
+          <div class="stat card-dark" data-reveal>
+            <p class="stat-num"><span class="chrome" data-count="185">0</span><small>kg</small></p>
+            <p class="stat-label">di panca piana in gara</p>
+          </div>
+          <div class="stat card-dark" data-reveal>
+            <p class="stat-num"><span class="chrome">+</span><span class="chrome" data-count="31">0</span><small>kg</small></p>
+            <p class="stat-label">in quattro edizioni della Military Cup</p>
+          </div>
+          <div class="stat card-dark" data-reveal>
+            <p class="stat-num"><span class="chrome" data-count="2">0</span><small>ori</small></p>
+            <p class="stat-label">consecutivi, 2025 e 2026</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-photos">
+        <figure class="ph" data-reveal><img src="assets/img/gara-concentrazione.webp" alt="Simone Cervesato concentrato prima di un'alzata in gara" loading="lazy"><figcaption>La concentrazione prima dell’alzata.</figcaption></figure>
+        <figure class="ph" data-reveal><img src="assets/img/gara-panca-medaglia.webp" alt="Simone Cervesato seduto sulla panca con la medaglia al collo" loading="lazy"><figcaption>Sulla panca, con la medaglia.</figcaption></figure>
+        <figure class="ph" data-reveal><img src="assets/img/gara-podio.webp" alt="Simone Cervesato sul podio con la medaglia" loading="lazy"><figcaption>Sul podio.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVIZI ============ -->
+  <section class="services light" id="servizi">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow" data-reveal>Servizi</p>
+        <h2 class="h2" data-reveal>Su misura.<br>Ovunque tu sia.</h2>
+        <p class="lead" data-reveal>Cinque modi per allenarti con me. Lo stesso metodo in ognuno.</p>
+      </header>
+      <div class="bento">
+        <article class="tile tile-xl tile-dark" data-reveal>
+          <div class="tile-media"><img src="assets/img/sbd-bilanciere.webp" alt="" loading="lazy"></div>
+          <div class="tile-body">
+            <p class="tile-tag">In palestra</p>
+            <h3>Personal training 1:1</h3>
+            <p>Uno a uno, dal vivo. Ogni seduta costruita su di te, ogni ripetizione seguita da vicino.</p>
+          </div>
+        </article>
+        <article class="tile" data-reveal>
+          <svg class="tile-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 22 24 8l18 14M11 18v22h26V18" /><path d="M20 40V29h8v11"/></svg>
+          <p class="tile-tag">A casa tua</p>
+          <h3>A domicilio</h3>
+          <p>Ti alleni a casa, con la stessa qualità e la stessa attenzione. Il metodo lo porto io.</p>
+        </article>
+        <article class="tile" data-reveal>
+          <svg class="tile-ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="17" cy="15" r="6"/><circle cx="33" cy="17" r="5"/><path d="M5 40c0-7 5-12 12-12s12 5 12 12M28 29c1-.6 3-1 5-1 6 0 10 4 10 11"/></svg>
+          <p class="tile-tag">In due o tre</p>
+          <h3>Coppia e piccoli gruppi</h3>
+          <p>Più motivazione, stessa cura del dettaglio. Perfetto con il partner o con un amico.</p>
+        </article>
+        <article class="tile" data-reveal>
+          <svg class="tile-ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="4" width="20" height="40" rx="4"/><path d="M21 38h6"/><path d="M19 20l4 4 7-8"/></svg>
+          <p class="tile-tag">Ovunque</p>
+          <h3>Coaching online</h3>
+          <p>Programma personalizzato, analisi dei video delle tue alzate e check regolari. Da qualsiasi città.</p>
+        </article>
+        <article class="tile tile-wide tile-dark" data-reveal>
+          <div class="tile-body">
+            <p class="tile-tag">Per atleti</p>
+            <h3>Preparazione gare</h3>
+            <p>Street lifting e panca piana: dalla programmazione al giorno della gara, con l’esperienza di chi in pedana ci sale davvero.</p>
+          </div>
+          <svg class="tile-medal" viewBox="0 0 120 120" aria-hidden="true">
+            <path d="M42 8h14l8 30M78 8H64l-8 30" />
+            <circle cx="60" cy="74" r="34"/>
+            <circle cx="60" cy="74" r="25"/>
+            <path d="M54 66l7-5v27"/>
+          </svg>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DOVE ============ -->
+  <section class="where" id="dove">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow" data-reveal>Dove</p>
+        <h2 class="h2" data-reveal>Nel cuore<br><span class="chrome">di Milano.</span></h2>
+        <p class="lead" data-reveal>Scegli tu dove allenarti. Il metodo resta lo stesso.</p>
+      </header>
+      <div class="places">
+        <article class="place place-main" data-reveal>
+          <p class="place-badge">In apertura</p>
+          <h3>Factory Gym Club</h3>
+          <p class="place-where">Milano Duomo</p>
+          <p>La mia palestra di riferimento, nel centro di Milano.</p>
+          <p class="coords" aria-hidden="true">45.4642° N · 9.1900° E</p>
+        </article>
+        <article class="place" data-reveal>
+          <h3>BULB</h3>
+          <p class="place-where">Studi a Milano</p>
+          <p>Spazi privati e in sharing, prenotati per il tuo allenamento.</p>
+        </article>
+        <article class="place" data-reveal>
+          <h3>A domicilio</h3>
+          <p class="place-where">A casa tua</p>
+          <p>Ci alleniamo dove ti è più comodo, a Milano.</p>
+        </article>
+        <article class="place" data-reveal>
+          <h3>Online</h3>
+          <p class="place-where">Ovunque tu sia</p>
+          <p>Programma, video e check a distanza.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COME SI INIZIA ============ -->
+  <section class="steps light" id="inizia">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow" data-reveal>Come si inizia</p>
+        <h2 class="h2" data-reveal>Quattro passi.<br>Il primo è il più facile.</h2>
+      </header>
+      <ol class="step-list">
+        <li data-reveal><span class="step-n">1</span><h3>Scrivimi</h3><p>Compila il modulo qui sotto o mandami un messaggio su WhatsApp.</p></li>
+        <li data-reveal><span class="step-n">2</span><h3>Ci conosciamo</h3><p>Parliamo di obiettivi, storia sportiva, tempi e disponibilità.</p></li>
+        <li data-reveal><span class="step-n">3</span><h3>Valutazione</h3><p>Test di postura, mobilità e forza per capire da dove partire.</p></li>
+        <li data-reveal><span class="step-n">4</span><h3>Si parte</h3><p>Programma su misura, seduta dopo seduta. E i progressi si misurano.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ GALLERIA ============ -->
+  <section class="gallery" id="galleria">
+    <div class="wrap gallery-head">
+      <div>
+        <p class="eyebrow" data-reveal>Galleria</p>
+        <h2 class="h2" data-reveal>Ogni giorno,<br><span class="chrome">in pedana.</span></h2>
+      </div>
+      <div class="gallery-nav">
+        <button class="round" data-dir="-1" aria-label="Foto precedenti"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="round" data-dir="1" aria-label="Foto successive"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <div class="strip" id="strip" tabindex="0" aria-label="Foto di Simone">
+      <figure><img src="assets/img/gara-concentrazione.webp" alt="In gara, concentrato sulla pedana" loading="lazy"></figure>
+      <figure><img src="assets/img/fisico.webp" alt="Ritratto di Simone Cervesato" loading="lazy"></figure>
+      <figure><img src="assets/img/gara-podio.webp" alt="Sul podio con i compagni di gara" loading="lazy"></figure>
+      <figure><img src="assets/img/stacco.webp" alt="Stacco da terra con dischi blu" loading="lazy"></figure>
+      <figure><img src="assets/img/gara-pedana.webp" alt="Verso la pedana di gara" loading="lazy"></figure>
+      <figure><img src="assets/img/sorriso.webp" alt="Simone Cervesato all'aperto" loading="lazy"></figure>
+      <figure><img src="assets/img/gara-panca-medaglia.webp" alt="Sulla panca con la medaglia" loading="lazy"></figure>
+      <figure><img src="assets/img/tramonto.webp" alt="Al mare al tramonto" loading="lazy"></figure>
+      <figure><img src="assets/img/sbd-bilanciere.webp" alt="Con il bilanciere, pronto per la gara" loading="lazy"></figure>
+      <figure><img src="assets/img/estate.webp" alt="Simone Cervesato in estate" loading="lazy"></figure>
+    </div>
+    <div class="wrap">
+      <a class="link-more" href="https://www.instagram.com/simonecervesato_pt/" target="_blank" rel="noopener">Seguimi su Instagram @simonecervesato_pt</a>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq light" id="domande">
+    <div class="wrap faq-grid">
+      <header class="sec-head">
+        <p class="eyebrow" data-reveal>Domande</p>
+        <h2 class="h2" data-reveal>Tutto quello<br>che vuoi sapere.</h2>
+      </header>
+      <div class="faq-list" data-reveal>
+        <details>
+          <summary>Devo essere già allenato per iniziare?</summary>
+          <p>No. Il programma parte dal tuo livello, qualunque sia: che tu non abbia mai preso in mano un bilanciere o che tu voglia preparare una gara.</p>
+        </details>
+        <details>
+          <summary>Dove si svolgono gli allenamenti?</summary>
+          <p>In palestra (Factory Gym Club – Milano Duomo, in apertura), negli studi BULB di Milano, a casa tua oppure online.</p>
+        </details>
+        <details>
+          <summary>Come funziona il coaching online?</summary>
+          <p>Ricevi un programma personalizzato, mi mandi i video delle tue alzate e facciamo check regolari per correggere la tecnica e adattare i carichi.</p>
+        </details>
+        <details>
+          <summary>Segui anche chi vuole gareggiare?</summary>
+          <p>Sì. Street lifting e panca piana sono le mie discipline: ti preparo dalla programmazione fino al giorno della gara.</p>
+        </details>
+        <details>
+          <summary>Posso allenarmi con il partner o con un amico?</summary>
+          <p>Certo: gli allenamenti in coppia o in piccolo gruppo sono pensati proprio per questo.</p>
+        </details>
+        <details>
+          <summary>Quanto costa?</summary>
+          <p>Dipende dal percorso (1:1, coppia, a domicilio, online) e da quante volte a settimana ci alleniamo. Scrivimi: ti preparo una proposta chiara, senza sorprese.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATTI ============ -->
+  <section class="contact" id="contatti">
+    <div class="wrap contact-grid">
+      <div class="contact-copy">
+        <p class="eyebrow" data-reveal>Contatti</p>
+        <h2 class="h2" data-reveal>Il primo passo<br><span class="chrome">è un messaggio.</span></h2>
+        <p class="lead" data-reveal>Raccontami il tuo obiettivo. Ti rispondo personalmente.</p>
+        <ul class="direct" data-reveal>
+          <li><a href="https://wa.me/393491375208" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-1-.5-1.8-1.3-2.3-2.3l.8-1-1-2L9 9.5Z"/></svg>WhatsApp · +39 349 137 5208</a></li>
+          <li><a href="tel:+393491375208"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Chiama</a></li>
+          <li><a href="mailto:simonecervesato@libero.it"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>simonecervesato@libero.it</a></li>
+          <li><a href="https://www.instagram.com/simonecervesato_pt/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>@simonecervesato_pt</a></li>
+        </ul>
+      </div>
+
+      <form class="form card-dark" id="contact-form" novalidate data-reveal>
+        <div class="field">
+          <label for="f-name">Come ti chiami?</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Nome e cognome" required>
+        </div>
+        <fieldset class="field">
+          <legend>Qual è il tuo obiettivo?</legend>
+          <div class="chips" data-name="goal">
+            <label><input type="checkbox" value="Perdere peso"><span>Perdere peso</span></label>
+            <label><input type="checkbox" value="Tonificare"><span>Tonificare</span></label>
+            <label><input type="checkbox" value="Aumentare la forza"><span>Aumentare la forza</span></label>
+            <label><input type="checkbox" value="Massa muscolare"><span>Massa muscolare</span></label>
+            <label><input type="checkbox" value="Postura e benessere"><span>Postura e benessere</span></label>
+            <label><input type="checkbox" value="Preparare una gara"><span>Preparare una gara</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="field">
+          <legend>Come preferisci allenarti?</legend>
+          <div class="chips" data-name="mode">
+            <label><input type="checkbox" value="In palestra"><span>In palestra</span></label>
+            <label><input type="checkbox" value="A domicilio"><span>A domicilio</span></label>
+            <label><input type="checkbox" value="In coppia / gruppo"><span>In coppia / gruppo</span></label>
+            <label><input type="checkbox" value="Online"><span>Online</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="f-msg">Raccontami qualcosa di te <small>(facoltativo)</small></label>
+          <textarea id="f-msg" name="message" rows="3" placeholder="Esperienza, disponibilità, eventuali infortuni…"></textarea>
+        </div>
+        <p class="form-error" id="form-error" role="alert"></p>
+        <div class="form-actions">
+          <button type="submit" class="pill pill-wa" data-via="wa">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12Z"/></svg>
+            Invia su WhatsApp
+          </button>
+          <button type="submit" class="pill pill-ghost" data-via="mail">Invia via email</button>
+        </div>
+        <p class="form-note">Premendo invia si apre WhatsApp o la tua email con il messaggio già scritto: questo sito non salva nessun dato.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <img src="assets/img/logo-sc.png" alt="" class="footer-mark">
+    <div>
+      <img src="assets/img/logo-scritta.png" alt="Simone Cervesato" class="footer-word">
+      <p>Personal Trainer · Milano</p>
+    </div>
+    <p class="footer-legal">© <span id="year">2026</span> Simone Cervesato · P.IVA 13195880961</p>
+  </div>
+</footer>
+
+<a class="float-cta" id="float-cta" href="#contatti">Prenota una consulenza</a>
+
+<script src="assets/js/main.js" defer></script>
+<script type="module" src="assets/js/stage.js"></script>
+</body>
+</html>
