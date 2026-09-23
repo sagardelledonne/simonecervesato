@@ -232,7 +232,7 @@
     if (goals.length) lines.push(`Obiettivo: ${goals.join(', ')}.`);
     if (modes.length) lines.push(`Preferisco allenarmi: ${modes.join(', ').toLowerCase()}.`);
     if (msg) lines.push('', msg);
-    lines.push('', '(Messaggio dal sito simonecervesato.it)');
+    lines.push('', '(Messaggio inviato dal sito)');
     const text = lines.join('\n');
 
     if (via === 'mail') {
