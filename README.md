@@ -21,7 +21,7 @@ poi aprire http://localhost:8000
 ## Da completare
 
 - Foto originali in alta qualità (quelle di Instagram sono 640 px)
-- Foto di gara con il marchio del fotografo (RECLIFT, `gara-concentrazione.webp`): tolta dal sito finché non c'è l'ok; si può rimettere nei Risultati e nella galleria
+- Foto di gara RECLIFT (`gara-concentrazione.webp`): permesso ottenuto (24/09/2026), usata nei Risultati e nella galleria; le foto ufficiali in alta qualità arriveranno dopo
 - Sigla della federazione della gara di panca (185 kg): scritta senza sigla
 - Caratteri: si usano quelli di sistema (SF su Apple, Segoe UI su Windows, Roboto su Android), niente Google Fonts
 - Pagina privacy (il modulo non salva dati: apre WhatsApp o l'email)
