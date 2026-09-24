@@ -6,6 +6,12 @@
   const ss = (a, b, v) => { const t = clamp((v - a) / (b - a)); return t * t * (3 - 2 * t); };
   const mqMobile = matchMedia('(max-width: 760px)');
 
+  // browser senza import map (Safari < 16.4): il 3D non può partire, mostra subito la foto
+  if (!(HTMLScriptElement.supports && HTMLScriptElement.supports('importmap'))) {
+    document.documentElement.classList.add('no-webgl');
+  }
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   const PHONE = '393491375208';
   const EMAIL = 'simonecervesato@libero.it';
 
@@ -14,16 +20,17 @@
   /* ---------- nav ---------- */
   const nav = $('#nav');
   const burger = $('#burger');
-  burger.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
+  const setMenu = open => {
+    nav.classList.toggle('open', open);
     burger.setAttribute('aria-expanded', open);
     document.body.style.overflow = open ? 'hidden' : '';
+  };
+  burger.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+  $$('#nav-links a, .nav-cta, .brand').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  matchMedia('(max-width: 980px)').addEventListener('change', e => { if (!e.matches) setMenu(false); });
+  addEventListener('keydown', e => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); burger.focus(); }
   });
-  $$('#nav-links a').forEach(a => a.addEventListener('click', () => {
-    nav.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }));
 
   const navLinks = $$('#nav-links a[href^="#"]:not(.nav-links-cta)');
   const sections = navLinks.map(a => $(a.getAttribute('href'))).filter(Boolean);
@@ -39,10 +46,11 @@
 
   window.STAGE = { p: 0, e: 0, k: -1, h: 0, local: 0, chapters: { C0, C1, N, SPAN } };
 
-  const show = (el, o, y) => {
+  // hide=true solo per i livelli con link (hero, finale): gli altri restano leggibili dai lettori vocali
+  const show = (el, o, y, hide = true) => {
     el.style.opacity = o.toFixed(3);
     el.style.transform = `translateY(${y.toFixed(1)}px)`;
-    el.style.visibility = o < 0.01 ? 'hidden' : 'visible';
+    if (hide) el.style.visibility = o < 0.01 ? 'hidden' : 'visible';
   };
 
   function updateStage() {
@@ -52,10 +60,10 @@
 
     const heroO = 1 - ss(0.012, 0.065, p);
     show(L.hero, heroO, -(1 - heroO) * 60);
-    show(L.cue, 1 - ss(0, 0.025, p), 0);
+    show(L.cue, 1 - ss(0, 0.025, p), 0, false);
 
     const tIn = ss(0.085, 0.125, p), tOut = ss(0.185, 0.215, p);
-    show(L.title, tIn * (1 - tOut), (1 - tIn) * 40 - tOut * 40);
+    show(L.title, tIn * (1 - tOut), (1 - tIn) * 40 - tOut * 40, false);
 
     const e = p < 0.5 ? ss(0.07, 0.2, p) : 1 - ss(0.815, 0.9, p);
 
@@ -73,7 +81,6 @@
         y = (1 - a) * 44 - b * 44;
       }
       c.style.opacity = o.toFixed(3);
-      c.style.visibility = o < 0.01 ? 'hidden' : 'visible';
       c.style.transform = mobile ? `translateY(${y.toFixed(1)}px)` : `translateY(calc(-50% + ${y.toFixed(1)}px))`;
     });
     const h = ss(C0 - 0.012, C0 + 0.01, p) * (1 - ss(C1 - 0.01, C1 + 0.012, p));
@@ -172,7 +179,17 @@
 
   /* ---------- numeri che salgono + grafico ---------- */
   $$('.bar').forEach((b, i) => b.style.setProperty('--i', i));
+  // il valore vero resta nel testo per i lettori vocali; quello animato parte da 0
+  $$('[data-count]').forEach(el => {
+    const sr = document.createElement('span');
+    sr.className = 'sr-only';
+    sr.textContent = el.dataset.count;
+    el.after(sr);
+    el.setAttribute('aria-hidden', 'true');
+    if (!reduceMotion) el.textContent = '0';
+  });
   const countUp = el => {
+    if (reduceMotion) return;
     const to = +el.dataset.count;
     const t0 = performance.now();
     const dur = 1500 + to * 2;
@@ -229,7 +246,7 @@
     const modes = picked('mode');
     const msg = $('#f-msg').value.trim();
     const lines = [`Ciao Simone! Sono ${name}.`];
-    if (goals.length) lines.push(`Obiettivo: ${goals.join(', ')}.`);
+    if (goals.length) lines.push(`${goals.length > 1 ? 'Obiettivi' : 'Obiettivo'}: ${goals.join(', ').toLowerCase()}.`);
     if (modes.length) lines.push(`Preferisco allenarmi: ${modes.join(', ').toLowerCase()}.`);
     if (msg) lines.push('', msg);
     lines.push('', '(Messaggio inviato dal sito)');

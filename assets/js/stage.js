@@ -254,9 +254,9 @@ function plateTexture(label) {
   g.fillStyle = '#fff';
   g.textAlign = 'center';
   g.textBaseline = 'middle';
-  g.font = '700 74px Inter, Arial, sans-serif';
+  g.font = '700 74px -apple-system, "Segoe UI", Roboto, Arial, sans-serif';
   g.fillText(label, 256, 62);
-  g.font = '700 46px Inter, Arial, sans-serif';
+  g.font = '700 46px -apple-system, "Segoe UI", Roboto, Arial, sans-serif';
   g.fillText('KG', 256, 452);
   g.fillRect(40, 250, 34, 12);
   g.fillRect(438, 250, 34, 12);
@@ -371,6 +371,10 @@ function applyGroup(g, o, force) {
   }
 }
 function applyAll(force) { GROUPS.forEach(g => applyGroup(g, groupOpacity[g], force)); }
+// prepara subito anche le versioni trasparenti dei materiali (servono quando un gruppo si "spegne"),
+// così il primo capitolo non blocca lo scroll per compilare gli shader
+GROUPS.forEach(g => applyGroup(g, 0.5, true));
+renderer.compile(scene, cam);
 applyAll(true);
 
 /* ---------- camera ---------- */

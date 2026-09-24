@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Simone Cervesato · Personal Trainer a Milano Duomo</title>
   <meta name="description" content="Simone Cervesato, personal trainer certificato ISSA Europe e istruttore di Street Lifting a Milano Duomo. Allenamenti 1:1, a domicilio, in coppia, online e preparazione gare.">
   <meta name="theme-color" content="#000000">
@@ -18,16 +18,15 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Simone Cervesato · Personal Trainer",
-    "description": "Personal trainer a Milano: allenamenti 1:1, a domicilio, in coppia, online e preparazione gare di street lifting e panca piana.",
+    "description": "Personal trainer a Milano: allenamenti 1:1, a domicilio, in coppia, online e preparazione gare di forza (military press, panca piana, street lifting).",
     "telephone": "+393491375208",
     "email": "simonecervesato@libero.it",
     "areaServed": "Milano",
@@ -40,7 +39,7 @@
   <script type="importmap">
   {
     "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js",
       "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
     }
   }
@@ -75,7 +74,7 @@
 
   <!-- ============ STAGE: hero + panca esplosa ============ -->
   <section class="stage" id="stage" aria-label="Il metodo, scomposto come una panca piana">
-    <span class="anchor" id="metodo" style="top:10%"></span>
+    <span class="anchor" id="metodo" style="top:14.5%"></span>
     <div class="stage-sticky">
       <div class="stage-glow" aria-hidden="true"></div>
       <canvas id="bench" aria-hidden="true"></canvas>
@@ -173,7 +172,7 @@
         <h2 class="h2" data-reveal>Ciao,<br>sono Simone.</h2>
         <p class="lead" data-reveal>Personal trainer certificato ISSA Europe, istruttore di Street Lifting e laureando in Scienze Motorie.</p>
         <p data-reveal>Da più di tre anni seguo persone a Milano con un obiettivo semplice: farle allenare bene, con costanza, e vedere risultati che durano.</p>
-        <p data-reveal>Prima di essere un coach sono un atleta. Gareggio nella forza, e ogni programma che scrivo passa dalla stessa disciplina che applico su di me: studio, provo, misuro. Poi lo porto a te.</p>
+        <p data-reveal>Prima di essere un coach sono un atleta. Gareggio nella military press e nella panca piana, e ogni programma che scrivo passa dalla stessa disciplina che applico su di me: studio, provo, misuro. Poi lo porto a te.</p>
         <ul class="creds" data-reveal-group>
           <li><strong>ISSA Europe</strong><span>Personal Trainer certificato</span></li>
           <li><strong>Street Lifting</strong><span>Istruttore certificato</span></li>
@@ -190,38 +189,38 @@
       <header class="sec-head">
         <p class="eyebrow" data-reveal>Risultati</p>
         <h2 class="h2" data-reveal>Allena ciò<br><span class="chrome">che pratica.</span></h2>
-        <p class="lead" data-reveal>Quattro edizioni della Military Cup di street lifting, quattro podi. E un carico che cresce ogni anno: la stessa progressione che costruisco con chi si allena con me.</p>
+        <p class="lead" data-reveal>Quattro edizioni della Military Cup di military press, quattro podi. E un carico che cresce ogni anno: la stessa progressione che costruisco con chi si allena con me.</p>
       </header>
 
       <div class="results-grid">
         <div class="chart card-dark" data-reveal id="chart">
-          <p class="chart-title">Military Cup · Street Lifting</p>
+          <p class="chart-title">Military Cup · Military press</p>
           <div class="bars">
-            <div class="bar" style="--kg:93"><b class="kg" data-count="93">0</b><i class="col"></i><span class="medal bronze">3°</span><em>2023</em></div>
-            <div class="bar" style="--kg:113"><b class="kg" data-count="113">0</b><i class="col"></i><span class="medal silver">2°</span><em>2024</em></div>
-            <div class="bar" style="--kg:116"><b class="kg" data-count="116">0</b><i class="col"></i><span class="medal gold">1°</span><em>2025</em></div>
-            <div class="bar" style="--kg:124"><b class="kg" data-count="124">0</b><i class="col"></i><span class="medal gold">1°</span><em>2026</em></div>
+            <div class="bar" style="--kg:93"><b class="kg" data-count="93">93</b><i class="col"></i><span class="medal bronze">3°</span><em>2023</em></div>
+            <div class="bar" style="--kg:113"><b class="kg" data-count="113">113</b><i class="col"></i><span class="medal silver">2°</span><em>2024</em></div>
+            <div class="bar" style="--kg:116"><b class="kg" data-count="116">116</b><i class="col"></i><span class="medal gold">1°</span><em>2025</em></div>
+            <div class="bar" style="--kg:124"><b class="kg" data-count="124">124</b><i class="col"></i><span class="medal gold">1°</span><em>2026</em></div>
           </div>
-          <p class="chart-note">Carico in kg per edizione</p>
+          <p class="chart-note">Military press, carico in kg per edizione</p>
         </div>
         <div class="stats">
           <div class="stat card-dark" data-reveal>
-            <p class="stat-num"><span class="chrome" data-count="185">0</span><small>kg</small></p>
+            <p class="stat-num"><span class="chrome" data-count="185">185</span><small>kg</small></p>
             <p class="stat-label">di panca piana in gara</p>
           </div>
           <div class="stat card-dark" data-reveal>
-            <p class="stat-num"><span class="chrome">+</span><span class="chrome" data-count="31">0</span><small>kg</small></p>
+            <p class="stat-num"><span class="chrome">+</span><span class="chrome" data-count="31">31</span><small>kg</small></p>
             <p class="stat-label">in quattro edizioni della Military Cup</p>
           </div>
           <div class="stat card-dark" data-reveal>
-            <p class="stat-num"><span class="chrome" data-count="2">0</span><small>ori</small></p>
+            <p class="stat-num"><span class="chrome" data-count="2">2</span><small>ori</small></p>
             <p class="stat-label">consecutivi, 2025 e 2026</p>
           </div>
         </div>
       </div>
 
       <div class="results-photos">
-        <figure class="ph" data-reveal><img src="assets/img/gara-concentrazione.webp" alt="Simone Cervesato concentrato prima di un'alzata in gara" loading="lazy"><figcaption>La concentrazione prima dell’alzata.</figcaption></figure>
+        <figure class="ph" data-reveal><img src="assets/img/gara-pedana.webp" alt="Simone Cervesato mentre va verso la pedana di gara" loading="lazy"><figcaption>Verso la pedana.</figcaption></figure>
         <figure class="ph" data-reveal><img src="assets/img/gara-panca-medaglia.webp" alt="Simone Cervesato seduto sulla panca con la medaglia al collo" loading="lazy"><figcaption>Sulla panca, con la medaglia.</figcaption></figure>
         <figure class="ph" data-reveal><img src="assets/img/gara-podio.webp" alt="Simone Cervesato sul podio con la medaglia" loading="lazy"><figcaption>Sul podio.</figcaption></figure>
       </div>
@@ -253,7 +252,7 @@
         </article>
         <article class="tile" data-reveal>
           <svg class="tile-ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="17" cy="15" r="6"/><circle cx="33" cy="17" r="5"/><path d="M5 40c0-7 5-12 12-12s12 5 12 12M28 29c1-.6 3-1 5-1 6 0 10 4 10 11"/></svg>
-          <p class="tile-tag">In due o tre</p>
+          <p class="tile-tag">Insieme</p>
           <h3>Coppia e piccoli gruppi</h3>
           <p>Più motivazione, stessa cura del dettaglio. Perfetto con il partner o con un amico.</p>
         </article>
@@ -267,7 +266,7 @@
           <div class="tile-body">
             <p class="tile-tag">Per atleti</p>
             <h3>Preparazione gare</h3>
-            <p>Street lifting e panca piana: dalla programmazione al giorno della gara, con l’esperienza di chi in pedana ci sale davvero.</p>
+            <p>Military press, panca piana e street lifting: dalla programmazione al giorno della gara, con l’esperienza di chi in pedana ci sale davvero.</p>
           </div>
           <svg class="tile-medal" viewBox="0 0 120 120" aria-hidden="true">
             <path d="M42 8h14l8 30M78 8H64l-8 30" />
@@ -294,7 +293,6 @@
           <h3>Factory Gym Club</h3>
           <p class="place-where">Milano Duomo</p>
           <p>La mia palestra di riferimento, nel centro di Milano.</p>
-          <p class="coords" aria-hidden="true">45.4642° N · 9.1900° E</p>
         </article>
         <article class="place" data-reveal>
           <h3>BULB</h3>
@@ -343,8 +341,7 @@
         <button class="round" data-dir="1" aria-label="Foto successive"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
       </div>
     </div>
-    <div class="strip" id="strip" tabindex="0" aria-label="Foto di Simone">
-      <figure><img src="assets/img/gara-concentrazione.webp" alt="In gara, concentrato sulla pedana" loading="lazy"></figure>
+    <div class="strip" id="strip" tabindex="0" role="region" aria-label="Foto di Simone">
       <figure><img src="assets/img/fisico.webp" alt="Ritratto di Simone Cervesato" loading="lazy"></figure>
       <figure><img src="assets/img/gara-podio.webp" alt="Sul podio con i compagni di gara" loading="lazy"></figure>
       <figure><img src="assets/img/stacco.webp" alt="Stacco da terra con dischi blu" loading="lazy"></figure>
@@ -382,7 +379,7 @@
         </details>
         <details>
           <summary>Segui anche chi vuole gareggiare?</summary>
-          <p>Sì. Street lifting e panca piana sono le mie discipline: ti preparo dalla programmazione fino al giorno della gara.</p>
+          <p>Sì. Gareggio nella military press e nella panca piana e sono istruttore di street lifting: ti preparo dalla programmazione fino al giorno della gara.</p>
         </details>
         <details>
           <summary>Posso allenarmi con il partner o con un amico?</summary>
